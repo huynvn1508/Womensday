@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let startY = Math.random() * (h / 2); // start mostly in upper half
             let endY = startY + Math.random() * 200 + 100; // fall down
             let size = Math.random() * 1.5 + 0.5;
-            let fallTime = Math.random() * 4 + 3; // 3-7s duration
+            let fallTime = Math.random() * 4 + 1; // 3-7s duration
             let delay = Math.random() * 2;
 
             CreateMagicDust(startX, endX, startY, endY, size, fallTime, delay);
