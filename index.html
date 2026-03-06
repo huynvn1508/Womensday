@@ -29,7 +29,7 @@
         .title {
             position: absolute;
             top: 50px;
-            font-size: 50px;
+            font-size: 90px;
             color: #e91e63;
             font-family: 'Dancing Script', cursive;
             font-weight: bold;
@@ -60,8 +60,10 @@
 
 
         .card {
-            width: 300px;
+            width: 600px;
             height: 400px;
+            max-width: 90vw;
+            /* Tự co lại trên mobile */
             position: relative;
             cursor: pointer;
             transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -74,7 +76,7 @@
 
 
         .card.open {
-            transform: translateX(75px) translateY(-10px);
+            transform: translateX(150px) translateY(-10px);
         }
 
 
@@ -113,27 +115,28 @@
 
         .cover-front h2 {
             color: white;
-            font-size: 28px;
-            margin: 10px 0;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            font-size: 40px;
+            margin: 15px 0;
+            text-align: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
 
         .buttons {
             display: flex;
             gap: 15px;
-            margin-top: 20px;
+            margin-top: 25px;
             z-index: 10;
-            height: 40px;
+            height: 50px;
             align-items: center;
             justify-content: center;
         }
 
         .btn {
-            padding: 8px 20px;
-            font-size: 16px;
+            padding: 10px 25px;
+            font-size: 20px;
             font-weight: bold;
             border: none;
-            border-radius: 20px;
+            border-radius: 25px;
             cursor: pointer;
             transition: background 0.2s, transform 0.2s;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -175,6 +178,8 @@
         .close-btn {
             background: #ff4d88;
             color: white;
+            font-size: 20px;
+            padding: 10px 25px;
         }
 
         .close-btn:hover {
@@ -189,7 +194,7 @@
             height: 100%;
             background: #fff;
             border-radius: 12px;
-            padding: 20px;
+            padding: 30px 40px;
             box-sizing: border-box;
             display: flex;
             align-items: center;
@@ -201,14 +206,14 @@
 
         .message {
             text-align: center;
-            font-size: 24px;
+            font-size: 32px;
             color: #d81b60;
-            line-height: 1.4;
+            line-height: 1.5;
             font-family: 'Dancing Script', cursive;
         }
 
         .flower {
-            font-size: 60px;
+            font-size: 80px;
             animation: pulse 2s infinite;
             display: inline-block;
         }
@@ -263,6 +268,52 @@
             100% {
                 transform: translateY(-20vh) rotateY(360deg) scale(1.2);
                 opacity: 0;
+            }
+        }
+
+        /* --- RESPONSIVE MOBILE --- */
+        @media screen and (max-width: 768px) {
+            .title {
+                font-size: 50px;
+                top: 20px;
+                text-align: center;
+                width: 100%;
+            }
+
+            .card {
+                height: 350px;
+            }
+
+            .card.open {
+                /* Trên mobile, mở thiệp thì dịch nhẹ lên trên một chút để thấy rõ, thay vì dịch ngang quá nhiều gây lọt khỏi màn hình */
+                transform: translateX(20px) translateY(-30px);
+            }
+
+            /* Mở bìa không lật hẳn 140 độ nữa mà lật ít hơn để không bị tràn màn hình trái */
+            .card.open .card-cover {
+                transform: rotateY(-110deg);
+            }
+
+            .flower {
+                font-size: 60px;
+            }
+
+            .cover-front h2 {
+                font-size: 32px;
+            }
+
+            .btn {
+                padding: 8px 16px;
+                font-size: 16px;
+            }
+
+            .message {
+                font-size: 24px;
+                padding: 10px;
+            }
+
+            .card-inside {
+                padding: 15px;
             }
         }
     </style>
