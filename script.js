@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 4. Typewriter Effect Logic
     const titleText = "Gửi tới chị em,";
-    const bodyText = `Nhân dịp mùng 8/3, anh em khối viễn thông xin chân thành cảm ơn các chị em vì đã luôn giúp đỡ và là những người bạn đồng hành không thể thiếu của chúng tôi trong mùa bận. Chúc chị em có một ngày lễ thật vui vẻ, hạnh phúc và chúc chị em ngày nào cũng là ngày 8/3, luôn được iu thương, luôn được nâng niu và trân trọng 😍😍 Để đáp lại sự iu thương từ chị em, anh em chúng tôi trân trọng kính mời chị em tham dự một bữa tiệc nho nhỏ tại Pantry vào hồi 15:00 ngày 7/3/2026. Rất mong chị em có thể sắp xếp thời gian và đến dự. <br><br>Sự có mặt của chị em là vinh hạnh của chúng tôi!!!`;
+    const bodyText = `Nhân dịp mùng 8/3, anh em khối viễn thông xin chân thành cảm ơn các chị em vì đã luôn giúp đỡ và là những người bạn đồng hành không thể thiếu của chúng tôi trong mùa bận. Chúc chị em có một ngày lễ thật vui vẻ, hạnh phúc và chúc chị em ngày nào cũng là ngày 8/3, luôn được iu thương, luôn được nâng niu và trân trọng 😍😍 Để đáp lại sự iu thương từ chị em, anh em chúng tôi trân trọng kính mời chị em tham dự một bữa tiệc nho nhỏ tại Pantry vào hồi 15:00 ngày 7/3/2026. Rất mong chị em có thể sắp xếp thời gian và đến dự.\n \n Sự có mặt của chị em là vinh hạnh của chúng tôi!!!`;
 
     let titleElement = document.getElementById('modal-title');
     let bodyElement = document.getElementById('modal-body');
