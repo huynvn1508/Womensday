@@ -99,10 +99,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         } else {
                             clearInterval(typeInterval2);
                         }
-                    }, 100); // Speed of body typing
-                }, 500);
+                    }, 60); // Speed of body typing
+                }, 300);
             }
-        }, 120); // Speed of title typing
+        }, 60); // Speed of title typing
     }
 
     function stopTypewriter() {
