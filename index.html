@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Một chút lãng mạn</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        crossorigin="anonymous" />
+</head>
+
+<body>
+
+    <!-- Starry background (always present) -->
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+
+    <!-- Intro SVG drawing Screen -->
+    <div class="intro-screen" id="intro-screen">
+        <svg id="intro-svg" viewBox="0 0 500 500" width="300" height="300">
+            <!-- An elegant heart path to trace -->
+            <path class="heart-path" d="M 250, 150 
+                     C 250, 150 200, 50 120, 50 
+                     C 40, 50 20, 150 20, 200 
+                     C 20, 250 100, 350 250, 450 
+                     C 400, 350 480, 250 480, 200 
+                     C 480, 150 460, 50 380, 50 
+                     C 300, 50 250, 150 250, 150 Z" fill="none" stroke="#ff4d6d" stroke-width="4" />
+        </svg>
+        <p id="click-hint" style="display: none;">Chạm để tiếp tục</p>
+    </div>
+
+    <!-- The Envelope View (Hidden initially) -->
+    <div class="main-castle" id="main-castle" style="display: none;">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="front flap"></div>
+                <div class="front pocket"></div>
+                <div class="letter">
+                    <p class="greeting-short">Điều kỳ diệu nhỏ</p>
+                    <div class="heart-icon">❤️</div>
+                </div>
+            </div>
+            <div class="glow-effect"></div>
+            <!-- Heart beating particles placeholder -->
+            <div class="hearts">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+                <div class="four"></div>
+                <div class="five"></div>
+            </div>
+        </div>
+        <div class="envelope-shadow"></div>
+    </div>
+
+    <!-- The Full-Screen Letter Reading Modal -->
+    <div class="letter-modal" id="letter-modal">
+        <div class="modal-box">
+            <i class="fa-solid fa-xmark close-modal" id="close-modal"></i>
+            <div class="modal-content">
+                <div class="decorative-corner top-left"></div>
+                <div class="decorative-corner bottom-right"></div>
+                <div class="text-container">
+                    <h2 id="modal-title"></h2>
+                    <p class="modal-body" id="modal-body"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Audio Player -->
+    <audio id="bg-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+        Trình duyệt của bạn không hỗ trợ thẻ audio.
+    </audio>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
