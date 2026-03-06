@@ -427,7 +427,8 @@ body {
     position: relative;
     width: 650px;
     max-width: 90%;
-    height: 450px;
+    min-height: 450px;
+    height: auto;
     background: var(--letter-color);
     border-radius: 15px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 77, 109, 0.3);
@@ -460,11 +461,13 @@ body {
 .modal-content {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: auto;
+    min-height: 390px;
     border: 2px solid var(--envelope-color);
     border-radius: 10px;
     padding: 30px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
